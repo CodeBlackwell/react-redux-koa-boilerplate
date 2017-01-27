@@ -25,5 +25,6 @@ const server = app.listen(port, function () {
  * REST
  */
 
-app.use(router.get('/data/', books.all));
-app.use(route.get('/view/books/', books.list));
+app.use(router.get('/data/profile', (ctx, next) => {
+return
+}));
