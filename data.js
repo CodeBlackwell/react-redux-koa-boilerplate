@@ -15,4 +15,9 @@ const applicant = [
   }
 ];
 
-export default { applicant };
+const greeting = 'Manage state using redux and immutable data structures? No problem!!';
+
+module.exports =  {
+    applicant: applicant,
+    greeting: greeting
+};

@@ -26,5 +26,5 @@ const server = app.listen(port, function () {
  */
 
 app.use(router.get('/data/profile', (ctx, next) => {
-return
+    console.log(ctx)
 }));
