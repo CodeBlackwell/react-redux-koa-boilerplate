@@ -1,15 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from './src/components/Layout'
-
-class App extends React.Component {
-    render () {
-      return ( <Layout/> )
-    }
-}
+import theRoot from './src/index'
 
 function run() {
-    ReactDOM.render(<App/>, document.getElementById('root'));
+    ReactDOM.render(theRoot(), document.getElementById('root'));
 }
 
 if (window.addEventListener) {
