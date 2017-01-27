@@ -1,5 +1,6 @@
 # Created by .ignore support plugin (hsz.mobi)
-*.idea*
+.idea
 node_modules
-*.DS_Store*
+.DS_Store
 build
+npm-debug.log

@@ -5,7 +5,7 @@ export default class Layout extends Component {
         return (
             <div>
                 <h1>Ohai!</h1>
-                <p>The phrase is an intentionally misspelled "Oh hi" and is usually used as a title on cutesy pictures of animals like on lolcats.</p>
+                <p>Changed for testing</p>
             </div>
         )
     }
