@@ -1,14 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Layout from './src/components/Layout'
 
 class App extends React.Component {
     render () {
-      return (
-        <div>
-          <h1>Ohai!</h1>
-          <p>The phrase is an intentionally misspelled "Oh hi" and is usually used as a title on cutesy pictures of animals like on lolcats.</p>
-        </div>
-      )
+      return ( <Layout/> )
     }
 }
 
