@@ -15,13 +15,11 @@ const actionHandlers = {
     [FETCH_PROFILE] (state, action) {
         const {
                   payload: {
-                      greeting,
                       profile
                   }
               }  = action;
 
         return Object.assign({}, state, {
-            greeting,
             profile
         });
     }

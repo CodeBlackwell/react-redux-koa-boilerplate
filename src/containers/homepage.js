@@ -2,16 +2,20 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Layout from '../components/Layout'
 import { KEY as HOMEPAGE_KEY } from '../constants/homepage_constants'
+import { fetchProfile } from '../actions/homepage_actions';
 
 class Homepage extends Component {
     render () {
-        const { profile, greeting } = this.props;
+        const { profile, greeting, dispatch } = this.props;
         return (
             <div className="homepage">
                 <Layout
                     profile={ profile }
                     greeting={ greeting }
                 />
+                <button
+                    onClick={ function(){ return dispatch(fetchProfile()) } }
+                >HIIII</button>
             </div>
         );
     }
