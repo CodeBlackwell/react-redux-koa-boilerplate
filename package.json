@@ -22,6 +22,7 @@
     "json-loader": "^0.5.4",
     "koa": "2.0.0-alpha.3",
     "koa-convert": "1.2.0",
+    "koa-router": "7.1.0",
     "koa-static": "2.0.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",

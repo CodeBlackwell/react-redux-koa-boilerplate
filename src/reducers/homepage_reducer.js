@@ -20,7 +20,7 @@ const actionHandlers = {
                   }
               }  = action;
 
-        return state.merge({
+        return Object.assign({}, state, {
             greeting,
             profile
         });

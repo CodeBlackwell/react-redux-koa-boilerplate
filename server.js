@@ -4,10 +4,21 @@ const port = process.env.PORT || 3000;
 const Koa = require('koa');
 const serve = require('koa-static');
 const convert = require('koa-convert');
+const router = require('koa-router')();
+
+const data = require('./data');
+
 const app = new Koa();
 const _use = app.use;
+
 app.use = (x) => _use.call(app, convert(x));
 app.use(serve('./build'));
+
+router.get('/data', (ctx, next) => {
+    ctx.body = data;
+});
+
+app.use(router.routes());
 
 const server = app.listen(port, function () {
     let host = server.address().address;
