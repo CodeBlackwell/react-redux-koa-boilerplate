@@ -15,7 +15,7 @@ const actionHandlers = {
     [FETCH_PROFILE] (state, action) {
         const {
                   payload: {
-                      profile
+                      data: profile
                   }
               }  = action;
 

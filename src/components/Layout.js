@@ -6,12 +6,28 @@ export default class Layout extends Component {
         return (
             <div>
                 <h1 className="greeting">{greeting}</h1>
-                <ul className="profile">{ this._renderProfile(profile) }</ul>
+                <div className="profile">{ this._renderProfile(profile) }</div>
             </div>
         )
     }
 
-    _renderProfile () {
-        return <li>"Code Blackwell is your guy!"</li>
+    _renderProfile (profile) {
+        //@formatter:off
+        const {
+            name,
+            number,
+            hometown,
+            favoriteFancyQuote,
+        } = profile;
+        //@formatter:on
+        return (
+            <ul>
+                <li className="profile-property">Name: { name }</li>
+                <li className="profile-property">Number: { number }</li>
+                <li className="profile-property">Hometown: { hometown }</li>
+                <li className="profile-property">Favorite Fancy Quote: { favoriteFancyQuote }</li>
+            </ul>
+        )
     }
+
 }
