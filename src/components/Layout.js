@@ -14,10 +14,11 @@ export default class Layout extends Component {
     _renderProfile (profile) {
         //@formatter:off
         const {
+            email,
+            favoriteFancyQuote,
+            hometown,
             name,
             number,
-            hometown,
-            favoriteFancyQuote,
         } = profile;
         //@formatter:on
         return (
@@ -27,6 +28,7 @@ export default class Layout extends Component {
                         <th>#</th>
                         <th>Name</th>
                         <th>Number</th>
+                        <th>Email</th>
                         <th>Hometown</th>
                         <th>Favorite Fancy Quote</th>
                     </tr>
@@ -36,6 +38,7 @@ export default class Layout extends Component {
                         <th scope="row">1</th>
                         <td>{ name }</td>
                         <td>{ number }</td>
+                        <td>{ email }</td>
                         <td>{ hometown }</td>
                         <td>{ favoriteFancyQuote }</td>
                     </tr>
