@@ -15,7 +15,7 @@ class Homepage extends Component {
                 />
                 <button
                     onClick={ function(){ return dispatch(fetchProfile()) } }
-                >HIIII</button>
+                >Click to display my details!</button>
             </div>
         );
     }

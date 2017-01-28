@@ -21,12 +21,26 @@ export default class Layout extends Component {
         } = profile;
         //@formatter:on
         return (
-            <ul>
-                <li className="profile-property">Name: { name }</li>
-                <li className="profile-property">Number: { number }</li>
-                <li className="profile-property">Hometown: { hometown }</li>
-                <li className="profile-property">Favorite Fancy Quote: { favoriteFancyQuote }</li>
-            </ul>
+            <table className="table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Number</th>
+                        <th>Hometown</th>
+                        <th>Favorite Fancy Quote</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>{ name }</td>
+                        <td>{ number }</td>
+                        <td>{ hometown }</td>
+                        <td>{ favoriteFancyQuote }</td>
+                    </tr>
+                </tbody>
+            </table>
         )
     }
 
