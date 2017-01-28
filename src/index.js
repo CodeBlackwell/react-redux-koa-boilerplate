@@ -7,12 +7,12 @@ import ReduxPromise from 'redux-promise'
 import Root from './root'
 import rootReducer from './reducers/root_reducer'
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(rootReducer, composeEnhancers(
     applyMiddleware(ReduxPromise)
-))
-const history = browserHistory
+));
+const history = browserHistory;
 const theRoot = () => (<Root store={ store } history={ history }/>);
 
 export default theRoot

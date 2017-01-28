@@ -10,7 +10,7 @@ app.use = (x) => _use.call(app, convert(x));
 app.use(serve('./build'));
 
 const server = app.listen(port, function () {
- let host = server.address().address;
- let port = server.address().port;
- console.log('listening at http://%s:%s', host, port);
+    let host = server.address().address;
+    let port = server.address().port;
+    console.log('listening at http://%s:%s', host, port);
 });
