@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { KEY as HOMEPAGE_KEY } from '../constants/homepage_constants';
+import { fetchProfile } from '../actions/homepage_actions';
 
-export default class Profile extends Component {
+class Profile extends Component {
 
-    render() {
-        const { profile } = this.props;
-
-        if (profile == null) {
-            return (<h1>LeChristopher Blackwell is your guy!!</h1>)
-        }
+    render () {
+        const { greeting, profile } = this.props;
         //@formatter:off
         const {
             email,
@@ -43,4 +42,26 @@ export default class Profile extends Component {
         )
     }
 
+    componentDidMount () {
+        const { dispatch } = this.props;
+        dispatch(fetchProfile())
+    }
+
 }
+
+const mapStateToProps = function (state) {
+    //@formatter:off
+    const {
+        [HOMEPAGE_KEY]: {
+            greeting,
+            profile
+        }
+    } = state;
+    //@formatter:on
+    return {
+        greeting,
+        profile
+    };
+};
+
+export default connect(mapStateToProps)(Profile);

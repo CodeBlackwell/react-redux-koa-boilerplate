@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import Layout from '../components/Layout'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { Link } from 'react-router'
+import Greeting from '../components/greeting'
 import { KEY as HOMEPAGE_KEY } from '../constants/homepage_constants'
-import { fetchProfile } from '../actions/homepage_actions';
+
 
 class Homepage extends Component {
     render () {
-        const { profile, greeting, dispatch } = this.props;
+        const { greeting } = this.props;
         return (
             <div className="homepage">
-                <Layout
-                    profile={ profile }
+                <Greeting
                     greeting={ greeting }
                 />
-                <button
-                    onClick={ function(){ return dispatch(fetchProfile()) } }
-                >Click to display my details!</button>
+                <Link to="profile">Click to display my details!</Link>
+                { this.props.children }
             </div>
         );
     }
@@ -26,13 +25,11 @@ const mapStateToProps = function (state) {
     const {
         [HOMEPAGE_KEY]: {
         greeting,
-        profile
         }
     } = state;
     //@formatter:on
     return {
         greeting,
-        profile
     };
 };
 

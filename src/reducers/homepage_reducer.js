@@ -1,7 +1,7 @@
 import { FETCH_PROFILE } from '../constants/homepage_constants'
 
 const initialState = {
-    greeting: 'Hello Tucker Connelly! Good to meet you',
+    greeting: 'Hello Tucker Connelly! Good to meet you!',
     profile: {
         name: null,
         number: null,
