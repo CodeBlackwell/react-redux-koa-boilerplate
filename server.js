@@ -8,7 +8,6 @@ const convert = require('koa-convert');
 const router = require('koa-router')();
 const cors = require('koa-cors');
 
-
 const data = require('./data');
 
 const app = new Koa();
@@ -30,3 +29,4 @@ const server = app.listen(port, function () {
     let port = server.address().port;
     console.log('listening at http://%s:%s', host, port);
 });
+
