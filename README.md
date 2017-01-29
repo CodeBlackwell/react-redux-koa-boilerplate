@@ -7,6 +7,7 @@
 - ReactJS - integrated with an implementation of flux
 - Redux - managing state
 - ES6/babel - because ES6 is awesome 
+- react-router - allow use of `Route` `Router` and `Link` to change pages 
 - react-router-redux - allows 'router state' to be tracked in the application. reconstruct user stories etc
 - koa2 - Serving our bundle to the client
 - koa-router - RESTful routing, provides my profile @GET '/data'
