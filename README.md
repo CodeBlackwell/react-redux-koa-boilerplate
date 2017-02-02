@@ -1,4 +1,4 @@
-# This project is available live @ http://swegblackwell.herokuapp.com
+# This project is available live @ http://reactkoaboilerplate.herokuapp.com
 
 ### This project features an exciting tech stack of modern favorites in JavaScript Development
 
