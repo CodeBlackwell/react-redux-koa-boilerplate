@@ -1,7 +1,7 @@
 import { FETCH_PROFILE } from '../constants/homepage_constants'
 
 const initialState = {
-    greeting: 'Hello Tucker Connelly! Good to meet you!',
+    greeting: 'Hello Everyone! Good to meet you!',
     profile: {
         name: null,
         number: null,
@@ -29,7 +29,7 @@ const actionHandlers = {
 // Setting up the reducer this way is an optimization for constant time lookup on action handlers
 const homepageReducer = function (state = initialState, action) {
     if (actionHandlers[action.type] != null) {
-        return actionHandlers[action.type](state, action)
+        return actionHandlers[action.type] (state, action)
     }
     return state
 };
