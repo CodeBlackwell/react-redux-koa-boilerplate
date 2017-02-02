@@ -33,4 +33,4 @@
 - open your browser and navigate to `localhost:3000`
 
 ## To only test the RESTful GET endpoint
-- run `curl swegblackwell.herokuapp.com/data`
+- run `curl reactkoaboilerplate.herokuapp.com/data`
